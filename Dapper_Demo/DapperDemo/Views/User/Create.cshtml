@@ -1,0 +1,36 @@
+﻿@model DapperDemo.Models.User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+</head>
+<body>
+    <div>
+
+        @using (Html.BeginForm("Create", "User", FormMethod.Post))
+        {
+            <div>@Html.LabelFor(u => u.UserId)</div>
+            <div>
+                @Html.TextBoxFor(u => u.UserId)
+                @Html.ValidationMessageFor(u => u.UserId)
+            </div>
+            <div>@Html.LabelFor(u => u.UserPwd)</div>
+            <div>
+                @Html.PasswordFor(u => u.UserPwd)
+                @Html.ValidationMessageFor(u=>u.UserPwd)
+            </div>
+            <div><input type="submit" value="Create" /></div>
+        }
+    </div>
+</body>
+</html>

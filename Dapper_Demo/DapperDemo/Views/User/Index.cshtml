@@ -1,0 +1,49 @@
+﻿@model IEnumerable<DapperDemo.Models.User>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+</head>
+<body>
+    <div>
+        @Html.ActionLink("Create", "Create")
+        <table>
+            <tr>
+                <th>@Html.LabelFor(u => u.First().AutoId)</th>
+                <th>@Html.LabelFor(u => u.First().UserId)</th>
+                <th>@Html.LabelFor(u => u.First().UserPwd)</th>
+                <th colspan="2">操作</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(u => item.AutoId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(u => item.UserId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(u => item.UserPwd)
+                    </td>
+                    <td>
+                        @Html.ActionLink("修改", "Edit/" + item.AutoId)
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Delete", new { id=item.AutoId})" onclick="return confirm(' 确定删除吗？');">删除</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
