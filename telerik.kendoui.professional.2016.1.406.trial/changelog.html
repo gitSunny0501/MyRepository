@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Changelog for Kendo UI Professional v2016.1.406 (April 06, 2016)</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: .75em/1.5 Tahoma, sans-serif;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            font-size: normal;
+        }
+
+        h2 {
+            font-size: 2em;
+            font-weight: normal;
+
+            margin: 1.2em 0 .3em;
+            padding-bottom: .2em;
+        }
+
+        .breaking {
+            background-color: #e10c01;
+            color: #fff;
+            border-radius: 3px;
+            padding: 3px 4px;
+            display: inline-block;
+            font-size: 11px;
+            line-height: 1;
+            font-weight: bold;
+        }
+
+        #page {
+            width: 50em;
+            margin: 0 auto 2em;
+            border-radius: 0 0 1em 1em;
+            box-shadow: 0 0 10px #ccc;
+            padding: 1em 2em 2em;
+        }
+
+        .poBoxIcon {
+            float: left;
+            font-size: 2em;
+            margin: 1.2em .5em 0 0;
+        }
+
+        .poTopLine {
+            border-top: 2px solid #e1e1e1;
+            margin: 17px 0 40px 0;
+        }
+    </style>
+
+    <base href="http://www.telerik.com/support/whats-new/kendo-ui-web/release-history">
+</head>
+<body>
+    <div id="page">
+        <h1 class="title">Release notes for Kendo UI Professional v2016.1.406</h1>
+
+        <h1>Components</h1>
+        <div class="tClear poTopLine">
+            <div class="poBoxIconText">
+                <p><strong>What's new</strong></p>
+<ul>
+<li>Add Nova theme forms features to all mobile themes</li>
+<li>Update RouterOptions TypeScript interface</li>
+</ul>
+                <p><strong>What's fixed</strong></p>
+<ul>
+<li>Styling of indeterminate checkboxes in treeview is displaced when used with Bootstrap</li>
+<li>Disabled Checkboxes / RadioButtons have incorrect styling in some of the themes</li>
+<li>bower.json version does not inculde the +SP1 metadata part</li>
+<li>The `version` field is missing from TypeScript definition file</li>
+</ul>
+            </div>
+        </div>
+
+
+        <div class="tClear poTopLine">
+            <h2>AngularJS</h2>
+            
+            <p><strong>What's fixed</strong></p>
+<ul>
+<li>Throws an error due to multiple attempts to destroy a widget</li>
+<li>k-*template element is not properly removed</li>
+<li>Destroying the $scope of a dropdownlist results in a JavaScript error (AngularJS)</li>
+</ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>AutoComplete</h2>
+            
+            <p><strong>What's fixed</strong></p>
+<ul>
+<li>Throws an error due to multiple attempts to destroy a widget</li>
+</ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Chart</h2>
+            
+            <p><strong>What's fixed</strong></p>
+<ul>
+<li>Incorrect Date category axis aggregation for  DST dates and weeks baseUnit</li>
+<li>ChartAxis.slot does not limit categoryAxis slots</li>
+<li>Incorrect Date category axis aggregation for  DST dates and days baseUnit</li>
+<li>JavaScript error may occur when rendering time-based stacked line series</li>
+<li>Series notes do not adjust their position if the series marker is not visible</li>
+<li>Minor gridlines are not rendered for date value axis (e.g. scatterLine with dates)</li>
+<li>The zoomStart and zoomEnd events don't fire when the zoomable option is enabled</li>
+</ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>ComboBox</h2>
+            
+            <p><strong>What's fixed</strong></p>
+<ul>
+<li>Widget resets model when source is set asynchronously</li>
+<li>Throws an error due to multiple attempts to destroy a widget</li>
+<li>Cascade widget when parent is focused programatically</li>
+</ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Diagram</h2>
+            
+            <p><strong>What's fixed</strong></p>
+<ul>
+<li>An error is thrown for local data if the shape rotation is set</li>
+<li>TextBlock shouldn't modify passed options</li>
+<li>Connection may be unsuccessful when dropping a connection over a shape</li>
+</ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>DropDownList</h2>
+            
+            <p><strong>What's fixed</strong></p>
+<ul>
+<li>Widget resets model when source is set asynchronously</li>
+<li>Throws an error due to multiple attempts to destroy a widget</li>
+<li>Cascade widget when parent is focused programatically</li>
+<li>Destroying the $scope of a dropdownlist results in a JavaScript error (AngularJS)</li>
+</ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Editor</h2>
+            <p><strong>What's new</strong></p>
+<ul>
+<li>Updating tools through setOptions of Editor should rebind the toolbar</li>
+</ul>
+            <p><strong>What's fixed</strong></p>
+<ul>
+<li>Editor destroy can trigger page scroll in IE</li>
+<li>Setting FontName and FontSize messages does not change the component tooltip</li>
+</ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Grid</h2>
+            <p><strong>What's new</strong></p>
+<ul>
+<li>Enable native scrolling for column and filter menu mobile templates</li>
+</ul>
+            <p><strong>What's fixed</strong></p>
+<ul>
+<li>Custom edit command button detached after canceling the editing in popup edit mode</li>
+<li>Grid no records template is not compiled with Angular</li>
+<li>Security: Script tags in column title is executed while dragging the header cell. Encoding the title text is not sufficient to avoid this vulnerability.</li>
+<li>Row filter of a numeric column cannot be cleared after selecting "is null" or "is not null"</li>
+<li>Aggregate footer can become misaligned on virtual scroll</li>
+<li>PageSizes button is rendered outside the pager on small screens</li>
+<li>Flat theme: The text of Edit/Delete buttons and filter icons are not visible in a mobile Grid</li>
+<li>Footer is not displayed properly on small devices when previous/next arrows are disabled</li>
+</ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Map</h2>
+            
+            <p><strong>What's fixed</strong></p>
+<ul>
+<li>Re-centering the map continuously causes empty tiles to appear </li>
+</ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>MultiSelect</h2>
+            
+            <p><strong>What's fixed</strong></p>
+<ul>
+<li>Throws an error due to multiple attempts to destroy a widget</li>
+<li>Widget does not select item when reset source and update its value</li>
+<li>Grouping lines missing</li>
+</ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Scheduler</h2>
+            <p><strong>What's new</strong></p>
+<ul>
+<li>Support defining custom views with a specific name option</li>
+</ul>
+            <p><strong>What's fixed</strong></p>
+<ul>
+<li>Current time marker throws error when Scheduler is grouped and resources are empty</li>
+<li>Widget shifts the recurring series when DST happens</li>
+<li>Scheduler expands events with FREQ=DAILY;INTERVAL&gt;1 incorrectly during DST change</li>
+</ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Slider</h2>
+            
+            <p><strong>What's fixed</strong></p>
+<ul>
+<li>Slider with vertical orientation has incorrect styling when placed in a mobile application</li>
+</ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Spreadsheet</h2>
+            <p><strong>What's new</strong></p>
+<ul>
+<li>Add showGridLines option on sheets</li>
+</ul>
+            <p><strong>What's fixed</strong></p>
+<ul>
+<li>COUNTIF fails when criteria starts with number</li>
+<li>Incorrect parenthesis in formula printer</li>
+<li>Editors not kept in sync in IE</li>
+<li>IE re-enables disabled cell when formula bar is clicked</li>
+<li>Prevent paste into a disabled cell</li>
+<li>Excessive space between sheet name and delete icon in Bootstrap skin</li>
+<li>Excel import: Cell content might be interpreted incorrectly when it contains in-place Unicode strings</li>
+<li>Results from async formulas are not displayed</li>
+<li>JS error when there is no space for cells</li>
+<li>Dialog messages cannot be localized</li>
+<li>Cell format gets reset on every edit</li>
+<li>Spreadsheed cannot be nested in a form element</li>
+<li>Bottom tabstrip add button overshadows scrollbar</li>
+<li>IME characters cannot be typed in formula input</li>
+</ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>ToolBar</h2>
+            
+            <p><strong>What's fixed</strong></p>
+<ul>
+<li>JS error is thrown when tabbing off of the last element of non resize-able ToolBar</li>
+<li>Toolbar toggle button has wrong styling in the Material theme</li>
+<li>Show method causes the overflow split button to be always visible</li>
+</ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Touch</h2>
+            
+            <p><strong>What's fixed</strong></p>
+<ul>
+<li>The touch widget does not read the filter attribute when in MVVM scenario</li>
+</ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>TreeList</h2>
+            <p><strong>What's new</strong></p>
+<ul>
+<li>Allow localization via message files (kendo.messages.*.js)</li>
+</ul>
+            <p><strong>What's fixed</strong></p>
+<ul>
+<li>Autoscroll in TreeList while dragging an item does not work in Firefox</li>
+</ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>TreeView</h2>
+            
+            <p><strong>What's fixed</strong></p>
+<ul>
+<li>expandPath callback is not called when expanding to leaf node</li>
+<li>expandPath leaks dataSource change event handlers</li>
+<li>Disabling dragging over certain nodes removes hover class</li>
+<li>Calling expandPath with several different paths hits race conditions</li>
+</ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Upload</h2>
+            
+            <p><strong>What's fixed</strong></p>
+<ul>
+<li>Upload is not properly styled in Material Black and Metro themes</li>
+</ul>
+        </div>
+        <div class="tClear poTopLine">
+            <h2>Window</h2>
+            
+            <p><strong>What's fixed</strong></p>
+<ul>
+<li>TypeScript methods are not chainable</li>
+</ul>
+        </div>
+    </div>
+</body>
+</html>
